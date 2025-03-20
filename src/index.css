@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #004A8D;
+  --secondary-color: #F58220;
+  --accent-color: #E5E5E5;
+}
+
+/* Remove focus outline */
+* {
+  outline: none !important;
+}
+
+/* Remove focus ring styles */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body {
+  @apply bg-gray-50 font-sans min-h-screen;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.high-contrast a {
+  color: #ffff00 !important;
+}
+
+.high-contrast button {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+
+.high-contrast img {
+  filter: grayscale(100%) contrast(120%);
+}
+
+.high-contrast .nav-menu {
+  background-color: #333 !important;
+}
+
+.high-contrast .footer {
+  background-color: #333 !important;
+}
+
+/* VLibras Widget */
+.enabled {
+  position: fixed !important;
+  z-index: 100 !important;
+}
+
+/* Rest of the existing styles */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Botões */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-2.5 rounded-lg font-medium hover:bg-primary/90 transition-colors duration-200 inline-flex items-center justify-center;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white px-6 py-2.5 rounded-lg font-medium hover:bg-secondary/90 transition-colors duration-200 inline-flex items-center justify-center;
+}
+
+/* Read More Button */
+.btn-read-more {
+  @apply inline-flex items-center px-4 py-2 rounded-lg bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-all duration-200 font-medium text-sm gap-2;
+}
+
+.btn-read-more-light {
+  @apply inline-flex items-center px-4 py-2 rounded-lg bg-white text-primary hover:bg-primary/10 transition-all duration-200 font-medium text-sm gap-2;
+}
+
+/* Header Styles */
+.top-header {
+  @apply bg-gray-100 py-2 text-sm border-b border-gray-200;
+}
+
+@media (max-width: 640px) {
+  .top-header .container > div {
+    @apply flex-col space-y-2;
+  }
+  
+  .top-header .container > div > div {
+    @apply justify-center;
+  }
+
+  .footer-copyright {
+    @apply flex-col text-center space-y-2;
+  }
+}
+
+.main-header {
+  @apply bg-primary py-6 shadow-lg;
+}
+
+.nav-menu {
+  @apply bg-secondary shadow-md;
+}
+
+.nav-menu ul {
+  @apply flex flex-wrap justify-center;
+}
+
+.nav-menu li {
+  @apply relative;
+}
+
+.nav-menu .nav-link {
+  @apply block px-6 py-3 text-white hover:bg-white/10 transition-colors duration-200 text-sm font-medium;
+}
+
+/* Cards with Zoom Effects */
+.service-card {
+  @apply bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-gray-100;
+}
+
+.news-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100;
+}
+
+.news-card img {
+  @apply w-full h-48 object-cover transition-transform duration-500 hover:scale-110;
+}
+
+/* Global Card Zoom Effects */
+.card-zoom {
+  @apply transform transition-transform duration-300 hover:scale-105;
+}
+
+/* Specific Page Card Effects */
+.tender-card,
+.legislation-card,
+.transparency-card,
+.stats-card,
+.official-card,
+.service-stats-card,
+.download-card,
+.faq-card,
+.contact-card,
+.ombudsman-card {
+  @apply transform transition-transform duration-300 hover:scale-105;
+}
+
+/* Image hover effects */
+.hover-zoom {
+  @apply transition-transform duration-500 hover:scale-110;
+}
+
+/* Global image zoom effect */
+img {
+  @apply transition-transform duration-500 hover:scale-105;
+}
+
+/* Seções */
+.section-title {
+  @apply text-2xl font-bold text-gray-800 mb-8 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-24 after:h-1 after:bg-secondary;
+}
+
+/* Slider Styles */
+.slick-slider {
+  @apply mb-8;
+}
+
+.slick-dots {
+  @apply bottom-4;
+}
+
+.slick-dots li button:before {
+  @apply text-white opacity-50;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-white opacity-100;
+}
+
+/* News Section */
+.news-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.featured-news {
+  @apply col-span-full md:col-span-2 lg:col-span-2;
+}
+
+/* Services Section */
+.services-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8;
+}
+
+/* Footer Styles */
+.footer {
+  @apply bg-primary text-white py-16 mt-16;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12;
+}
+
+.footer-title {
+  @apply text-lg font-bold mb-6 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-secondary;
+}
+
+.footer-links {
+  @apply space-y-3;
+}
+
+.footer-links a {
+  @apply text-white/80 hover:text-white transition-colors duration-200 inline-flex items-center;
+}
+
+/* Inputs e Forms */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="number"],
+select {
+  @apply px-4 py-2.5 rounded-lg border border-gray-300 w-full;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .nav-menu ul {
+    @apply flex-col;
+  }
+  
+  .nav-menu .nav-link {
+    @apply w-full text-center;
+  }
+
+  .section-title {
+    @apply text-xl;
+  }
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white;
+}
