@@ -40,7 +40,7 @@ Este é um sistema moderno e responsivo para portais municipais, desenvolvido co
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/portal-municipal.git
+git clone https://github.com/andreemiranda/Site-de-Prefeitura.git
 cd portal-municipal
 ```
 
